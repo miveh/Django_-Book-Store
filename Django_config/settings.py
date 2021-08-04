@@ -143,10 +143,12 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # new
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # new
 ACCOUNT_SESSION_REMEMBER = True  # new
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False  # new
 ACCOUNT_USERNAME_REQUIRED = False  # new
 ACCOUNT_AUTHENTICATION_METHOD = 'email'  # new
 ACCOUNT_EMAIL_REQUIRED = True  # new
 ACCOUNT_UNIQUE_EMAIL = True  # new
+DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
